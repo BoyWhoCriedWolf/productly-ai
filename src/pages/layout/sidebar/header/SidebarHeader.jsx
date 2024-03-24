@@ -4,7 +4,7 @@ import { Box } from '@mui/material'
 
 export default function SidebarHeader() {
   return (
-    <Box display="flex" justifyContent="center" sx={{mt: 5}}>
+    <Box display="flex" justifyContent="center">
       <Logo />
     </Box>
   )

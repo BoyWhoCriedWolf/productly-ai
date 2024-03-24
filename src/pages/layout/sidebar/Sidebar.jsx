@@ -1,10 +1,17 @@
+import { Box, Stack } from '@mui/material'
 import React from 'react'
 import SidebarHeader from './header'
+import SidebarNavs from './navs'
+import SidebarFooter from './footer'
 
 export default function Sidebar() {
     return (
-        <div>
+        <Stack sx={{ height: "100%", mt: 5, mb: 7, mx: 2.5 }}>
             <SidebarHeader />
-        </div>
+            <Box flexGrow={1}>
+                <SidebarNavs />
+            </Box>
+            <SidebarFooter />
+        </Stack>
     )
 }
