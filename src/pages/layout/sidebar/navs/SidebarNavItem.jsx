@@ -1,7 +1,8 @@
 import { Box } from '@mui/material'
 import React from 'react'
+import defaultIconPath from "../../../../assets/img/icons/feedback.svg"
 
-export default function SidebarNavItem({ isActive = false, label = "Nav Item Label" }) {
+export default function SidebarNavItem({ iconPath = defaultIconPath, isActive = false, label = "Nav Item Label" }) {
     return (
         <Box sx={{
             px: 2.5,
@@ -10,11 +11,15 @@ export default function SidebarNavItem({ isActive = false, label = "Nav Item Lab
             borderRadius: theme => theme.shape.borderRadius,
             display: 'flex',
             alignItems: 'center',
+            gap: 2,
 
             ...(isActive ? {
                 background: theme => theme.palette.primary.main,
                 color: theme => theme.palette.primary.contrastText
             } : {})
-        }}>{label}</Box>
+        }}>
+            <img src={iconPath} alt={label} style={{}} />
+            <span>{label}</span>
+        </Box>
     )
 }

@@ -1,13 +1,15 @@
 import React from 'react'
 import SidebarNavItem from './SidebarNavItem'
 import { Stack } from '@mui/material'
+import homeIcon from "../../../../assets/img/icons/home.svg"
+import feedbackIcon from "../../../../assets/img/icons/feedback.svg"
 
 export default function SidebarNavs() {
     return (
         <Stack>
             {[
-                { label: "Home" },
-                { label: "All Feedback" },
+                { label: "Home", icon: homeIcon },
+                { label: "All Feedback", icon: feedbackIcon },
                 { label: "Integration" },
                 { label: "Slack Notification" },
                 { label: "Contract Support" },
