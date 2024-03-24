@@ -8,10 +8,10 @@ export default function Sidebar() {
     return (
         <Stack sx={{ height: "100%", mt: 5, mb: 7, mx: 2.5 }}>
             <SidebarHeader />
-            <Box flexGrow={1}>
+            <Box flexGrow={1} sx={{ mt: 6 }}>
                 <SidebarNavs />
             </Box>
             <SidebarFooter />
-        </Stack>
+        </Stack >
     )
 }

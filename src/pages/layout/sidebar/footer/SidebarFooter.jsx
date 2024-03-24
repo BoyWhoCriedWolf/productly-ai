@@ -1,10 +1,11 @@
-import { Box, Button } from '@mui/material'
+import { Box } from '@mui/material'
 import React from 'react'
+import SidebarNavItem from '../navs/SidebarNavItem'
 
 export default function SidebarFooter() {
     return (
         <Box sx={{ width: '100%' }}>
-            <Button fullWidth variant='contained'>Log out</Button>
+            <SidebarNavItem isActive label="Log out" />
         </Box>
     )
 }
