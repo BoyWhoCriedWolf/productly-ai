@@ -1,7 +1,7 @@
 import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
-import Conversation from "../../../components/conversation/Conversation";
 import { CONTENT_COLOR } from "../../../constants/color";
+import Conversation from "./Conversation";
 
 export default function ConversationContent({ data = [] }) {
   return (

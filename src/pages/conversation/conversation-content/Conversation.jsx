@@ -10,7 +10,7 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import { CONTENT_COLOR } from "../../constants/color";
+import { CONTENT_COLOR } from "../../../constants/color";
 
 export default function Conversation({ data = [] }) {
   return (
@@ -28,7 +28,6 @@ export default function Conversation({ data = [] }) {
               }}
             >
               <TableCell sx={{ width: "10%", paddingLeft: "30px" }}>
-                {" "}
                 <Typography>Conversation</Typography>{" "}
               </TableCell>
               <TableCell sx={{ width: "40%" }} align="left"></TableCell>
@@ -36,13 +35,13 @@ export default function Conversation({ data = [] }) {
                 <Typography>User</Typography>
               </TableCell>
               <TableCell sx={{ width: "10%" }} align="left">
-              <Typography>Org</Typography>
+                <Typography>Org</Typography>
               </TableCell>
               <TableCell sx={{ width: "15%" }} align="left">
                 <Typography>Last Update</Typography>
               </TableCell>
               <TableCell sx={{ width: "15%" }} align="left">
-              <Typography>Status</Typography>
+                <Typography>Status</Typography>
               </TableCell>
             </TableRow>
           </TableHead>
