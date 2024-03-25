@@ -7,7 +7,7 @@ import ConversationsHeader from "./conversations-header/ConversationsHeader";
 
 export default function Conversations() {
   return (
-    <Paper height="76vh" width="90%" padding="50px 100px">
+    <Paper width="90%" sx={{ backgroundColor: theme => theme.palette.background.primary, padding: '50px 100px', height: '100%' }}>
       <ConversationsHeader />
       <ConversationContent
         data={[
@@ -28,7 +28,7 @@ export default function Conversations() {
             description: "see all the 18 product insights",
             user: "Aaran",
             org: "",
-            update: "Today at 9 pm",
+            update: "Today at 10 pm",
             status: "Under Developer",
           },
         ]}

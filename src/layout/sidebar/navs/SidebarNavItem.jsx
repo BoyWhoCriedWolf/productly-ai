@@ -1,4 +1,4 @@
-import { Box } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import React from 'react'
 import defaultIconPath from "../../../assets/img/icons/feedback.svg"
 
@@ -18,8 +18,8 @@ export default function SidebarNavItem({ iconPath = defaultIconPath, isActive = 
                 color: theme => theme.palette.primary.contrastText
             } : {})
         }}>
-            <img src={iconPath} alt={label} style={{}} />
-            <span>{label}</span>
+            <img src={iconPath} alt={label} />
+            <Typography variant='body2'>{label}</Typography>
         </Box>
     )
 }

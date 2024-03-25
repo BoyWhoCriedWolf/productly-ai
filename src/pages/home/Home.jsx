@@ -10,7 +10,7 @@ export default function Home() {
   ];
 
   return (
-   <Box height='77vh' width='100%' padding='50px 100px' sx={{ backgroundColor: PRIMARY_BG_COLOR }}>
+   <Box height='77vh' width='100%' padding='50px 100px' sx={{ backgroundColor: (theme) => theme.palette.backgroundColor.primary }}>
       <HomeHeader />
       <ConversationContent data = {home_data} />
     </Box>
