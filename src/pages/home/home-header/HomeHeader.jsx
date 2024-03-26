@@ -1,21 +1,21 @@
-import { Stack } from "@mui/material";
+import { Grid } from "@mui/material";
 import React from "react";
-import HomeCard from "../../../../components/card/home-card/HomeCard";
+import HomeCard from "../../../components/card/home-card/HomeCard";
 
 export default function HomeHeader({ data = [] }) {
   return (
-    <Stack sx={{ padding: "20px 10px" }}>
+    <Grid container spacing={5} sx={{ py: 3 }}>
       {data.map((item, itemIndex) => {
         return (
-          <div key={itemIndex}>
+          <Grid item lg={6} md={6} sm={6} xs={6} key={itemIndex}>
             <HomeCard
               icon={item?.icon}
               totalNum={item?.totalNum}
               description={item?.description}
             />
-          </div>
+          </Grid>
         );
       })}
-    </Stack>
+    </Grid>
   );
 }

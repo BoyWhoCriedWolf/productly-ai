@@ -7,7 +7,15 @@ import ConversationsHeader from "./conversations-header/ConversationsHeader";
 
 export default function Conversations() {
   return (
-    <Paper width="90%" sx={{ backgroundColor: theme => theme.palette.background.primary, padding: '50px 100px', height: '100%' }}>
+    <Paper
+      width="90%"
+      sx={{
+        backgroundColor: (theme) => theme.palette.background.primary,
+        px: 12,
+        py: 6,
+        height: "100%",
+      }}
+    >
       <ConversationsHeader />
       <ConversationContent
         data={[

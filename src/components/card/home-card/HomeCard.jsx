@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
 
 export default function HomeCard({
@@ -9,17 +9,21 @@ export default function HomeCard({
   return (
     <Stack
       sx={{
-        borderRadius: "8px",
-        padding: "20px 10px",
+        borderRadius: 1,
+        padding: (theme) => theme.spacing(1, 3),
         display: "flex",
         justifyContent: "space-between",
+        flexDirection: "row",
+        backgroundColor: (theme) => theme.palette.primary.contrastText,
       }}
     >
-      <span>{icon}</span>
-      <span>
-        <Typography>{totalNum}</Typography>
-        <Typography>{description}</Typography>
-      </span>
+      <Box paddingY={theme => theme.spacing(2)} paddingRight={theme => theme.spacing(12)}>{icon}</Box>
+      <div style={{ display: "flex", flexDirection: 'column', justifyContent: 'center' }}>
+        <Typography variant="h5" align="right">
+          {totalNum}
+        </Typography>
+        <Typography align="right">{description}</Typography>
+      </div>
     </Stack>
   );
 }

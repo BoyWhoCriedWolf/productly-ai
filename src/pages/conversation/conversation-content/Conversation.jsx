@@ -8,13 +8,16 @@ import {
   TableHead,
   TableRow,
   Typography,
+  useTheme,
 } from "@mui/material";
 import React from "react";
-import { CONTENT_COLOR } from "../../../constants/color";
 
 export default function Conversation({ data = [] }) {
+  const theme = useTheme();
   return (
-    <Stack sx={{ backgroundColor: CONTENT_COLOR, padding: "10px 0 0 0" }}>
+    <Stack
+      sx={{ backgroundColor: (theme) => theme.palette.primary.contrastText }}
+    >
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650, border: "none" }} aria-label="simple table">
           <TableHead>
@@ -23,12 +26,11 @@ export default function Conversation({ data = [] }) {
                 backgroundColor: (theme) => theme.palette.background.dark,
                 opacity: "40",
                 border: "none",
-                paddingLeft: 0,
-                paddingRight: 0,
+                px: 0,
               }}
             >
-              <TableCell sx={{ width: "10%", paddingLeft: "30px" }}>
-                <Typography>Conversation</Typography>{" "}
+              <TableCell sx={{ width: "10%", pl: 4 }}>
+                <Typography>Conversation</Typography>
               </TableCell>
               <TableCell sx={{ width: "40%" }} align="left"></TableCell>
               <TableCell sx={{ width: "10%" }} align="left">
@@ -52,7 +54,7 @@ export default function Conversation({ data = [] }) {
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
                 <TableCell
-                  sx={{ width: "10%", paddingRight: 0, paddingLeft: 0 }}
+                  sx={{ width: "10%", px: 0 }}
                   align="right"
                   component="th"
                   scope="row"
@@ -61,8 +63,8 @@ export default function Conversation({ data = [] }) {
                     src={row.img}
                     alt="img"
                     style={{
-                      width: "56px",
-                      height: "56px",
+                      width: theme.spacing(7),
+                      height: theme.spacing(7),
                       borderRadius: "50%",
                     }}
                   />
