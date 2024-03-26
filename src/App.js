@@ -4,14 +4,12 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import { Box, Drawer, Stack } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
+import { Outlet } from "react-router-dom";
 import "./App.css";
 import { DRAWER_WIDTH } from "./constants/dimension";
 import Header from "./layout/header";
 import Sidebar from "./layout/sidebar/Sidebar";
-import Conversations from "./pages/conversation";
 import { lightTheme } from "./theme/lightTheme";
-import Home from "./pages/home/Home";
-import Integration from "./pages/integration/Integration";
 
 function App() {
   return (
@@ -38,9 +36,7 @@ function App() {
       >
         <Header />
         <Box flexGrow={1}>
-          <Home />
-          <Conversations />
-          <Integration />
+          <Outlet />
         </Box>
       </Stack>
     </ThemeProvider>

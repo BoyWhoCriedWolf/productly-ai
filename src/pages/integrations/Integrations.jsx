@@ -1,7 +1,7 @@
 import { Box, Paper, Stack, Typography } from "@mui/material";
 import React from "react";
 
-export default function Integration() {
+export default function Integrations() {
   return (
     <Paper
       sx={{
